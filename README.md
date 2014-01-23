@@ -1,4 +1,4 @@
 mroberts-devel
 ==============
 
-My new website. This one will use bootstrap.
+My new website. This one uses bootstrap.
