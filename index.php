@@ -1,43 +1,19 @@
-<?php
-/**
- * Requests collector.
- *
- *  This file collects requests if:
- *	- no mod_rewrite is available or .htaccess files are not supported
- *  - requires App.baseUrl to be uncommented in app/Config/core.php
- *	- app/webroot is not set as a document root.
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c), Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 0.2.9
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-/**
- *  Get Cake's root directory
- */
-define('APP_DIR', 'app');
-define('DS', DIRECTORY_SEPARATOR);
-define('ROOT', dirname(__FILE__));
-define('WEBROOT_DIR', 'webroot');
-define('WWW_ROOT', ROOT . DS . APP_DIR . DS . WEBROOT_DIR . DS);
-
-/**
- * This only needs to be changed if the "cake" directory is located
- * outside of the distributed structure.
- * Full path to the directory containing "cake". Do not add trailing directory separator
- */
-if (!defined('CAKE_CORE_INCLUDE_PATH')) {
-	define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
-}
-
-require APP_DIR . DS . WEBROOT_DIR . DS . 'index.php';
+<?php $title = "home"; include("header.php");?>
+        <div class="col-md-10 col-md-offset-1" id="home-content">
+          <h1>Matthew Roberts <small><a href="http://keyserver.ubuntu.com:11371/pks/lookup?op=get&fingerprint=on&search=0x210E343B4D1B0E10"><abbr title="Pretty Good Privacy" class="initialism">PGP</abbr></a></small></h1>
+          <p class="lead"><a href="http://uoguelph.ca/svc/">Webmaster</a> - <a href="http://stikmen.ca/">Developer</a> - <a href="http://sk.lung.ca/">IT Intern</a> - <a href="http://uoguelph.ca/~curtain/">Technical Director</a></p>
+          <hr>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="lead"><strong>Developer</strong>, <strong>theatre technician</strong> and <strong>student</strong> at the <em>University of Guelph</em>.</p>
+              <p>Majoring in Information Systems and Human Behaviour, an interdisciplinary degree in <strong>Computer Science</strong> and <strong>Psychology</strong> with selected emphasis in <strong>Sociology</strong> and <strong>Anthropology</strong>; and minoring in <strong>Economics</strong>.</p>
+            </div>
+            <div class="col-md-6">
+              <h2>interests</h2>
+              <ul>
+                <li><p>The combination of computer science and human behaviour: artificial intelligence, usability, human/computer interaction, the evolution of technology, and the technological singularity.</p></li>
+                <li><p>How technology changes our world today, how it will continue to impact our world in the future, and what it all means for us humans.</p></li>
+              </ul>
+            </div>
+          </div>
+          <?php include("footer.php");?>
